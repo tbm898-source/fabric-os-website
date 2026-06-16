@@ -6,6 +6,7 @@ import PlatformsSection from "@/components/site/PlatformsSection";
 import PrivacySection from "@/components/site/PrivacySection";
 import AccessibilitySection from "@/components/site/AccessibilitySection";
 import ProjectSection from "@/components/site/ProjectSection";
+import RoadmapSection from "@/components/site/RoadmapSection";
 import DownloadSection from "@/components/site/DownloadSection";
 import SiteFooter from "@/components/site/SiteFooter";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <PrivacySection />
         <AccessibilitySection />
         <ProjectSection />
+        <RoadmapSection />
         <DownloadSection />
       </main>
       <SiteFooter />

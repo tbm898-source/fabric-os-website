@@ -17,7 +17,86 @@ export const NAV_ITEMS = [
   { label: "Platforms", href: "#platforms" },
   { label: "Privacy", href: "#privacy" },
   { label: "Project", href: "#project" },
+  { label: "Roadmap", href: "#roadmap" },
   { label: "Download", href: "#download" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Development Roadmap
+// status: 'complete' | 'active' | 'next' | 'planned'
+// No dates — milestones only.
+// ─────────────────────────────────────────────────────────────────────────────
+export const ROADMAP = [
+  {
+    id: "foundation",
+    phase: "Phase 1",
+    title: "Foundation",
+    status: "active",
+    description:
+      "Establishing the core application architecture, data model, and the initial rendering engine for the unified control interface. This phase covers the fundamental building blocks that all future work depends on.",
+    items: [
+      "Core application shell and navigation model",
+      "Local network discovery and device enumeration",
+      "Layout and rendering engine",
+      "Configuration storage and state management",
+    ],
+  },
+  {
+    id: "desktop",
+    phase: "Phase 2",
+    title: "Desktop Platforms",
+    status: "next",
+    description:
+      "Delivering the first installable builds for Windows and macOS. Focus is on platform integration, system accessibility APIs, and local-first reliability across both architectures.",
+    items: [
+      "Windows application packaging and distribution",
+      "macOS application — Apple Silicon and Intel",
+      "Platform-native accessibility integration",
+      "Keyboard and pointer interaction model",
+    ],
+  },
+  {
+    id: "protocol",
+    phase: "Phase 3",
+    title: "Protocol and Integration Layer",
+    status: "planned",
+    description:
+      "Expanding the range of supported home automation standards and device protocols. The goal is broad compatibility without vendor lock-in, using open and documented interfaces where possible.",
+    items: [
+      "Multi-protocol device communication layer",
+      "Integration configuration interface",
+      "Local automation rule engine",
+      "Service bridge for common home automation standards",
+    ],
+  },
+  {
+    id: "mobile",
+    phase: "Phase 4",
+    title: "Mobile Platforms",
+    status: "planned",
+    description:
+      "Bringing Fabric OS to Android and iPhone and iPad. The interface model adapts to compact environments while maintaining full feature parity with the desktop applications.",
+    items: [
+      "Android application — phones and tablets",
+      "iPhone and iPad application",
+      "Adaptive layout for compact displays",
+      "Cross-device state synchronization over local network",
+    ],
+  },
+  {
+    id: "customization",
+    phase: "Phase 5",
+    title: "Customization and Themes",
+    status: "planned",
+    description:
+      "Opening the layout, appearance, and skin system to user configuration. This phase delivers the tools for individuals to adapt Fabric OS to their specific environment and workflow.",
+    items: [
+      "Layout editor and saved presets",
+      "Visual theme and skin system",
+      "Accessibility preference profiles",
+      "Per-space and per-device configuration",
+    ],
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
