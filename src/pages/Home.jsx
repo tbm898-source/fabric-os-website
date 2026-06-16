@@ -8,6 +8,7 @@ import AccessibilitySection from "@/components/site/AccessibilitySection";
 import ProjectSection from "@/components/site/ProjectSection";
 import RoadmapSection from "@/components/site/RoadmapSection";
 import DownloadSection from "@/components/site/DownloadSection";
+import NotifySection from "@/components/site/NotifySection";
 import SiteFooter from "@/components/site/SiteFooter";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <ProjectSection />
         <RoadmapSection />
         <DownloadSection />
+        <NotifySection />
       </main>
       <SiteFooter />
     </div>
