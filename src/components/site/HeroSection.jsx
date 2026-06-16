@@ -18,7 +18,7 @@ export default function HeroSection() {
     <section
       id="overview"
       ref={ref}
-      className="relative min-h-screen flex flex-col justify-end pt-16 border-b border-[#1E1E22]"
+      className="relative flex flex-col justify-end pt-14 border-b border-[#1E1E22]"
       aria-labelledby="hero-headline"
     >
       {/* Background grid lines */}
@@ -37,7 +37,7 @@ export default function HeroSection() {
         {/* Interface Preview — upper portion */}
         <div
           className={`
-            w-full mt-20 mb-12
+            w-full mt-6 mb-8
             transition-all duration-700
             motion-reduce:transition-none
             ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
@@ -50,7 +50,7 @@ export default function HeroSection() {
         {/* Hero text block — bottom-left anchored */}
         <div
           className={`
-            max-w-4xl pb-20
+            max-w-4xl pb-12
             transition-all duration-700 delay-150
             motion-reduce:transition-none
             ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
