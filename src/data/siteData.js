@@ -16,6 +16,7 @@ export const NAV_ITEMS = [
   { label: "Features", href: "#features" },
   { label: "Platforms", href: "#platforms" },
   { label: "Privacy", href: "#privacy" },
+  { label: "Philosophy", href: "#philosophy" },
   { label: "Project", href: "#project" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Download", href: "#download" },
@@ -98,6 +99,70 @@ export const ROADMAP = [
     ],
   },
 ];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Design Philosophy
+// ─────────────────────────────────────────────────────────────────────────────
+export const DESIGN_PHILOSOPHY = {
+  summary:
+    "Fabric OS is designed to keep users in control of their own systems, files, permissions, and project data. Core workflows are built to run on the user's own device or local network, without requiring constant dependence on a remote service. Cloud features exist to extend what the local system can do — not to replace it.",
+  principles: [
+    {
+      id: "local-ownership",
+      title: "Local Ownership",
+      description:
+        "User files, project state, configuration, logs, and system context are stored on hardware the user controls whenever practical. Nothing is moved off-device without a deliberate action by the user.",
+    },
+    {
+      id: "offline-resilience",
+      title: "Offline Resilience",
+      description:
+        "Core functions remain available during internet outages or service interruptions. Fabric OS is designed so that a loss of connectivity does not make the user's system unmanageable.",
+    },
+    {
+      id: "privacy-by-architecture",
+      title: "Privacy by Architecture",
+      description:
+        "Fabric OS minimizes data collection to what is necessary for the task at hand. There is no hidden telemetry. Any transfer of data to an external service is made visible, labeled with its purpose, and requires user action to enable.",
+    },
+    {
+      id: "explicit-consent",
+      title: "Explicit Consent",
+      description:
+        "Sensitive permissions, integrations, and remote connections require clear user approval before they are established. Fabric OS does not request access silently or bundle permission requests inside unrelated workflows.",
+    },
+    {
+      id: "least-privilege",
+      title: "Least-Privilege Access",
+      description:
+        "Applications, agents, and services receive only the permissions necessary to complete the task they are performing. Broader access is not granted speculatively or held after a task is complete.",
+    },
+    {
+      id: "transparent-behavior",
+      title: "Transparent System Behavior",
+      description:
+        "Users can see what Fabric OS is doing, what data it is accessing, where that data is stored, and why a specific action requires elevated privileges. Behavior is not obscured behind abstractions or silent background processes.",
+    },
+    {
+      id: "cloud-optional",
+      title: "Cloud as an Optional Extension",
+      description:
+        "Remote services may support synchronization, collaboration, backup, or heavy computation. They do not become the sole authority over the user's system. Removing a cloud integration should not break local functionality.",
+    },
+    {
+      id: "portability",
+      title: "Portability and Reversibility",
+      description:
+        "Users can export their data, remove integrations, restore prior configurations, and move between systems. Fabric OS does not create lock-in through proprietary formats or opaque data structures that make leaving impractical.",
+    },
+    {
+      id: "human-readable-security",
+      title: "Human-Readable Security",
+      description:
+        "When an action is blocked by macOS, Windows, Linux, or another platform, Fabric OS explains the restriction in plain language: which permission controls it, what the risk is, and what the smallest safe change would be. Fabric OS does not bypass operating-system security — it makes security boundaries understandable, navigable, and controlled by the user.",
+    },
+  ],
+};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Platform & Release Data

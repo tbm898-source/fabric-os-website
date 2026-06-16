@@ -5,6 +5,7 @@ import FeaturesSection from "@/components/site/FeaturesSection";
 import PlatformsSection from "@/components/site/PlatformsSection";
 import PrivacySection from "@/components/site/PrivacySection";
 import AccessibilitySection from "@/components/site/AccessibilitySection";
+import PhilosophySection from "@/components/site/PhilosophySection";
 import ProjectSection from "@/components/site/ProjectSection";
 import RoadmapSection from "@/components/site/RoadmapSection";
 import DownloadSection from "@/components/site/DownloadSection";
@@ -22,6 +23,7 @@ export default function Home() {
         <PlatformsSection />
         <PrivacySection />
         <AccessibilitySection />
+        <PhilosophySection />
         <ProjectSection />
         <RoadmapSection />
         <DownloadSection />
