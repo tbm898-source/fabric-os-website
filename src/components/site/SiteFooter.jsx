@@ -42,6 +42,14 @@ export default function SiteFooter() {
               Links
             </p>
             <ul className="flex flex-wrap gap-x-8 gap-y-3" role="list">
+              <li>
+                <a
+                  href="/press"
+                  className="text-sm text-[#88888C] hover:text-[#EDEDED] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0B] rounded-sm"
+                >
+                  Press
+                </a>
+              </li>
               {FOOTER_LINKS.map((link) => (
                 <li key={link.label}>
                   {link.isAvailable && link.url ? (

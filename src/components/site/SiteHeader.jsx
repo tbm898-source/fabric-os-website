@@ -69,6 +69,12 @@ export default function SiteHeader() {
                 {item.label}
               </button>
             ))}
+            <a
+              href="/press"
+              className="px-4 py-2 text-sm text-[#38BDF8] hover:text-white border border-[#38BDF8]/20 hover:border-[#38BDF8]/50 transition-colors duration-200 tracking-wide rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0B]"
+            >
+              Press
+            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -102,6 +108,12 @@ export default function SiteHeader() {
                 {item.label}
               </button>
             ))}
+            <a
+              href="/press"
+              className="text-left px-3 py-3 text-sm text-[#38BDF8] hover:bg-[#141416] transition-colors duration-200 tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded-sm"
+            >
+              Press
+            </a>
           </nav>
         </div>
       )}
