@@ -1,13 +1,50 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>Base44 APP</title>
+
+    <!-- Page title & description -->
+    <title>Fabric OS — One interface for the systems that make a space work</title>
+    <meta name="description" content="Fabric OS is a cross-platform application under active development, designed to provide a unified, customizable interface for connected devices, home systems, automation, and local services. Planned for Windows, macOS, Android, and iPhone and iPad." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fabric OS — One interface for the systems that make a space work" />
+    <meta property="og:description" content="A cross-platform application under active development. Planned for Windows, macOS, Android, and iPhone and iPad. Local-first, privacy-conscious, and accessibility-focused." />
+
+    <!-- Favicon — inline SVG data URI, no external file required -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Crect x='0.5' y='0.5' width='27' height='27' rx='3.5' stroke='%2338BDF8' stroke-width='1.5'/%3E%3Cline x1='9' y1='7' x2='9' y2='21' stroke='%2338BDF8' stroke-width='2'/%3E%3Cline x1='9' y1='7' x2='19' y2='7' stroke='%2338BDF8' stroke-width='2'/%3E%3Cline x1='9' y1='14' x2='17' y2='14' stroke='%2338BDF8' stroke-width='2'/%3E%3C/svg%3E"
+    />
+
+    <!-- Skip to content link — assistive technology -->
+    <style>
+      #skip-to-content {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        background: #38BDF8;
+        color: #0A0A0B;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        z-index: 9999;
+        text-decoration: none;
+        border-radius: 0 0 4px 0;
+        transition: top 0.15s;
+      }
+      #skip-to-content:focus {
+        top: 0;
+      }
+    </style>
   </head>
   <body>
+    <!-- Skip-to-content link for keyboard and screen reader users -->
+    <a href="#main-content" id="skip-to-content">Skip to main content</a>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
