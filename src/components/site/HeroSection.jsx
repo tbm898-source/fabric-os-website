@@ -148,7 +148,7 @@ function InterfacePreview() {
       className="relative w-full border border-[#2A2A2F] rounded-sm overflow-hidden"
       style={{ aspectRatio: "16/9", background: "#0D0D0F" }}
       role="img"
-      aria-label="Fabric OS web prototype — Retro control panel home overview with room status and device controls"
+      aria-label="Fabric OS web prototype — PipBoy home dashboard with room status, alerts, and quick actions"
     >
       {/* Corner marks */}
       {[
@@ -171,7 +171,7 @@ function InterfacePreview() {
         />
         <img
           src="/hero/fabric-home-overview-retro.png"
-          alt="Fabric OS web prototype showing the Retro skin home overview dashboard"
+          alt="Fabric OS web prototype showing the PipBoy home dashboard with room status and system alerts"
           className="absolute inset-0 w-full h-full object-cover object-top"
           loading="eager"
           decoding="async"
