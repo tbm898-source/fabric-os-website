@@ -145,8 +145,11 @@ export default function HeroSection() {
 function InterfacePreview() {
   return (
     <div
-      className="relative w-full border border-[#2A2A2F] rounded-sm overflow-hidden"
-      style={{ aspectRatio: "16/9", background: "#0D0D0F" }}
+      className="relative w-full border border-[#2A2A2F] rounded-sm overflow-hidden shadow-[0_0_0_1px_rgba(56,189,248,0.08),0_24px_80px_rgba(0,0,0,0.45)]"
+      style={{
+        minHeight: 'clamp(420px, 56vw, 760px)',
+        background: 'radial-gradient(ellipse at top, #111820 0%, #0D0D0F 55%, #0A0A0B 100%)',
+      }}
       role="img"
       aria-label="Fabric OS web prototype — PipBoy home dashboard with room status, alerts, and quick actions"
     >
@@ -159,24 +162,40 @@ function InterfacePreview() {
       ].map((cls, i) => (
         <div
           key={i}
-          className={`absolute w-5 h-5 border-[#38BDF8]/60 z-10 ${cls}`}
+          className={`absolute w-5 h-5 border-[#38BDF8]/70 z-10 ${cls}`}
           aria-hidden="true"
         />
       ))}
 
-      <picture>
-        <source
-          media="(min-resolution: 2dppx)"
-          srcSet="/hero/fabric-home-overview-retro@2x.png"
-        />
-        <img
-          src="/hero/fabric-home-overview-retro.png"
-          alt="Fabric OS web prototype showing the PipBoy home dashboard with room status and system alerts"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-          loading="eager"
-          decoding="async"
-        />
-      </picture>
+      <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-3 md:p-4">
+        <picture className="block w-full h-full max-w-[1440px]">
+          <source
+            media="(min-resolution: 2dppx)"
+            srcSet="/hero/fabric-home-overview-retro@2x.png"
+          />
+          <img
+            src="/hero/fabric-home-overview-retro.png"
+            alt="Fabric OS web prototype showing the cyan PipBoy home dashboard with room status and system alerts"
+            className="w-full h-full object-contain object-center"
+            style={{
+              maxHeight: 'clamp(400px, 54vw, 720px)',
+              imageRendering: 'auto',
+            }}
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+      </div>
+
+      {/* Subtle edge vignette — keeps UI readable on the site chrome */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(10,10,11,0.35) 0%, transparent 12%, transparent 88%, rgba(10,10,11,0.5) 100%)',
+        }}
+      />
     </div>
   );
 }
