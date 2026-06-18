@@ -22,6 +22,13 @@ export const NAV_ITEMS = [
   { label: "Download", href: "#download" },
 ];
 
+// Product and repository links — update when URLs change
+export const PRODUCT_LINKS = {
+  liveDemo: "https://fabric-home-os.base44.app/demo",
+  productRepo: "https://github.com/tbm898-source/fabric",
+  websiteRepo: "https://github.com/tbm898-source/fabric-os-website",
+};
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Development Roadmap
 // status: 'complete' | 'active' | 'next' | 'planned'
@@ -34,12 +41,12 @@ export const ROADMAP = [
     title: "Foundation",
     status: "active",
     description:
-      "Establishing the core application architecture, data model, and the initial rendering engine for the unified control interface. This phase covers the fundamental building blocks that all future work depends on.",
+      "The web prototype establishes the core dashboard, role and skin system, capability-based permissions, and a read-only bridge for live status overlay. Native desktop and mobile builds remain planned.",
     items: [
-      "Core application shell and navigation model",
-      "Local network discovery and device enumeration",
-      "Layout and rendering engine",
-      "Configuration storage and state management",
+      "Web prototype dashboard with Retro, Family, and Power skins",
+      "Role-based visibility and control (Admin, Family, Guest)",
+      "Public interactive demo at fabric-home-os.base44.app/demo",
+      "Read-only bridge snapshot import (fabric.bridge.v1, development)",
     ],
   },
   {
@@ -90,10 +97,10 @@ export const ROADMAP = [
     title: "Customization and Themes",
     status: "planned",
     description:
-      "Opening the layout, appearance, and skin system to user configuration. This phase delivers the tools for individuals to adapt Fabric OS to their specific environment and workflow.",
+      "Expanding user-facing layout and skin configuration beyond the three prototype skins. This phase delivers deeper tools for individuals to adapt Fabric OS to their specific environment and workflow.",
     items: [
       "Layout editor and saved presets",
-      "Visual theme and skin system",
+      "Extended visual theme and skin system",
       "Accessibility preference profiles",
       "Per-space and per-device configuration",
     ],
@@ -256,8 +263,16 @@ export const FEATURES = [
 // ─────────────────────────────────────────────────────────────────────────────
 export const FOOTER_LINKS = [
   { label: "Documentation", isAvailable: false },
-  { label: "Project Status", isAvailable: false },
+  {
+    label: "Project Status",
+    isAvailable: true,
+    url: "https://github.com/tbm898-source/fabric",
+  },
   { label: "Privacy", isAvailable: false },
-  { label: "GitHub", isAvailable: false },
+  {
+    label: "GitHub",
+    isAvailable: true,
+    url: "https://github.com/tbm898-source/fabric-os-website",
+  },
   { label: "Contact", isAvailable: false },
 ];

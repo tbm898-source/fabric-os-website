@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { PRODUCT_LINKS } from "@/data/siteData";
 
 export default function OverviewSection() {
   const { ref, visible } = useScrollReveal();
@@ -34,6 +35,18 @@ export default function OverviewSection() {
               designed to make devices, services, automation, and controls easier
               to understand and use — without requiring users to adopt a single
               vendor ecosystem.
+            </p>
+            <p className="text-base text-[#88888C] leading-[1.6] max-w-3xl mb-8">
+              An interactive web prototype is available now.{" "}
+              <a
+                href={PRODUCT_LINKS.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#38BDF8] hover:text-[#5cc8fa] underline underline-offset-2 transition-colors duration-200"
+              >
+                Open the live demo
+              </a>
+              .
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1E1E22] border border-[#1E1E22] rounded-sm overflow-hidden">
               {[

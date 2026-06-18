@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { PRODUCT_LINKS } from "@/data/siteData";
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false);
@@ -90,6 +91,22 @@ export default function HeroSection() {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
+            <a
+              href={PRODUCT_LINKS.liveDemo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex items-center gap-2 px-6 py-3
+                bg-[#38BDF8] text-[#0A0A0B]
+                text-sm font-semibold tracking-wide
+                hover:bg-[#5cc8fa] transition-colors duration-200
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0B]
+                rounded-sm
+              "
+              style={{ transitionTimingFunction: "cubic-bezier(0.2,0.8,0.2,1)" }}
+            >
+              Try the Prototype
+            </a>
             <button
               onClick={() => handleScroll("#download")}
               className="
@@ -131,7 +148,7 @@ function InterfacePreview() {
       className="relative w-full border border-[#2A2A2F] rounded-sm overflow-hidden"
       style={{ aspectRatio: "16/9", background: "#0D0D0F" }}
       role="img"
-      aria-label="Interface preview placeholder — will be replaced with application screenshots"
+      aria-label="Fabric OS web prototype — Retro control panel home overview with room status and device controls"
     >
       {/* Corner marks */}
       {[
@@ -142,75 +159,24 @@ function InterfacePreview() {
       ].map((cls, i) => (
         <div
           key={i}
-          className={`absolute w-5 h-5 border-[#38BDF8]/60 ${cls}`}
+          className={`absolute w-5 h-5 border-[#38BDF8]/60 z-10 ${cls}`}
           aria-hidden="true"
         />
       ))}
 
-      {/* Wireframe skeleton */}
-      <svg
-        className="absolute inset-0 w-full h-full"
-        viewBox="0 0 1200 675"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        preserveAspectRatio="xMidYMid meet"
-      >
-        {/* Desktop frame - sidebar */}
-        <rect x="40" y="40" width="200" height="595" rx="2" stroke="#2A2A2F" strokeWidth="1"/>
-        {/* Sidebar items */}
-        {[0,1,2,3,4,5,6,7].map(i => (
-          <rect key={i} x="60" y={70 + i * 56} width="160" height="36" rx="2" stroke="#242428" strokeWidth="1"/>
-        ))}
-        {/* Sidebar accent line */}
-        <rect x="60" y="70" width="4" height="36" rx="1" fill="#38BDF8" opacity="0.5"/>
-
-        {/* Main content area */}
-        <rect x="268" y="40" width="640" height="595" rx="2" stroke="#2A2A2F" strokeWidth="1"/>
-        {/* Top bar in main */}
-        <rect x="268" y="40" width="640" height="48" rx="2" stroke="#2A2A2F" strokeWidth="1" fill="#111113"/>
-        {/* Content cards */}
-        {[0,1].map(col =>
-          [0,1,2].map(row => (
-            <rect
-              key={`${col}-${row}`}
-              x={288 + col * 314}
-              y={108 + row * 164}
-              width={294}
-              height={148}
-              rx="2"
-              stroke="#222226"
-              strokeWidth="1"
-            />
-          ))
-        )}
-        {/* Card accent lines */}
-        <line x1="288" y1="108" x2="430" y2="108" stroke="#38BDF8" strokeWidth="1" opacity="0.3"/>
-        <line x1="602" y1="108" x2="744" y2="108" stroke="#38BDF8" strokeWidth="1" opacity="0.3"/>
-
-        {/* Right panel */}
-        <rect x="936" y="40" width="224" height="595" rx="2" stroke="#2A2A2F" strokeWidth="1"/>
-        {[0,1,2,3,4].map(i => (
-          <rect key={i} x="956" y={60 + i * 96} width="184" height="76" rx="2" stroke="#242428" strokeWidth="1"/>
-        ))}
-
-        {/* Mobile frame */}
-        <rect x="680" y="480" width="160" height="144" rx="8" stroke="#38BDF8" strokeWidth="1" opacity="0.4"/>
-        <rect x="690" y="492" width="140" height="120" rx="2" stroke="#2A2A2F" strokeWidth="1"/>
-        {[0,1,2].map(i => (
-          <rect key={i} x="698" y={502 + i * 32} width="124" height="20" rx="1" stroke="#242428" strokeWidth="1"/>
-        ))}
-
-        {/* Grid lines — subtle horizontal */}
-        {[1,2,3,4,5,6,7].map(i => (
-          <line key={i} x1="40" y1={40 + i * 74} x2="1160" y2={40 + i * 74} stroke="#161618" strokeWidth="1"/>
-        ))}
-
-        {/* Label */}
-        <text x="600" y="648" textAnchor="middle" fill="#3A3A42" fontSize="11" fontFamily="monospace" letterSpacing="2">
-          INTERFACE PREVIEW — PLACEHOLDER
-        </text>
-      </svg>
+      <picture>
+        <source
+          media="(min-resolution: 2dppx)"
+          srcSet="/hero/fabric-home-overview-retro@2x.png"
+        />
+        <img
+          src="/hero/fabric-home-overview-retro.png"
+          alt="Fabric OS web prototype showing the Retro skin home overview dashboard"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          loading="eager"
+          decoding="async"
+        />
+      </picture>
     </div>
   );
 }

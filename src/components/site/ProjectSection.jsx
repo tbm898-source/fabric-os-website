@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { PRODUCT_LINKS } from "@/data/siteData";
 
 const environments = [
   "Homes",
@@ -50,6 +51,20 @@ export default function ProjectSection() {
               inconsistent. Fabric OS is being built to address that gap: a
               single, well-designed application that can span environments without
               requiring users to surrender control to any one vendor or platform.
+            </p>
+            <p className="text-base text-[#88888C] leading-[1.6] max-w-3xl mb-12">
+              A web prototype is live today for early exploration. Native installable
+              builds for Windows, macOS, Android, and iPhone and iPad remain in
+              development.{" "}
+              <a
+                href={PRODUCT_LINKS.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#38BDF8] hover:text-[#5cc8fa] underline underline-offset-2 transition-colors duration-200"
+              >
+                Try the prototype
+              </a>
+              .
             </p>
 
             {/* Environments */}
