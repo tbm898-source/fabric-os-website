@@ -36,4 +36,3 @@ jobs:
         run: npm run build
       - name: Audit high-severity vulnerabilities
         run: npm audit --audit-level=high
-
