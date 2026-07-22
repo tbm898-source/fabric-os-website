@@ -1,5 +1,6 @@
 {
-  "name": "New App",
+  "name": "Fabric OS Website",
+  "description": "Public product website and press resources for Fabric OS.",
   "site": {
     "installCommand": "npm install",
     "buildCommand": "npm run build",
