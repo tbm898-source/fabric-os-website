@@ -45,10 +45,9 @@ export default function PressHero() {
         </p>
 
         <p className="text-sm text-[#88888C] leading-[1.6] max-w-2xl mb-12">
-          Fabric OS is under active development. This press kit presents the project's
-          design intent, architectural commitments, and current development status
-          accurately and without exaggeration. All product claims are labeled with
-          their current status.
+          Fabric OS is under active development. A working web prototype is public;
+          native applications and broader connected-space integrations are planned.
+          Product claims below are labeled by their current status.
         </p>
 
         {/* CTA buttons */}

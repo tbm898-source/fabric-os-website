@@ -17,9 +17,8 @@ export default function PressBrandAssets() {
               Brand Assets
             </h2>
             <p className="text-xs text-[#4A4A52] leading-[1.6]">
-              All assets listed below are placeholders. Final design files will
-              be made available before the first public release. Do not reproduce
-              or modify without confirmation.
+              Downloadable brand assets have not been released yet. The list below
+              describes the planned editorial package without implying availability.
             </p>
           </div>
 
@@ -30,13 +29,13 @@ export default function PressBrandAssets() {
                   key={asset.id}
                   className="bg-[#0A0A0B] p-6 group hover:bg-[#0E0E10] transition-colors duration-200"
                 >
-                  {/* Placeholder thumbnail */}
+                  {/* Availability thumbnail */}
                   <div
                     className="w-full h-20 bg-[#111113] border border-[#1E1E22] rounded-sm mb-4 flex items-center justify-center"
-                    aria-label={`${asset.title} placeholder`}
+                    aria-label={`${asset.title} not yet released`}
                   >
                     <span className="text-[10px] text-[#2A2A2F] font-mono tracking-widest uppercase">
-                      Pending
+                      Not released
                     </span>
                   </div>
 
