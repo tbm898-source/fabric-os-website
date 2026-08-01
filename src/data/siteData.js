@@ -6,7 +6,7 @@
 export const SITE_META = {
   title: "Fabric OS",
   description:
-    "A cross-platform application under active development, designed to provide a clear, customizable interface for connected devices, home systems, automation, and local services.",
+    "Fabric is a human layer for connected spaces—one calm, adaptable view across the devices, rooms, scenes, and services you already use.",
   ogType: "website",
 };
 
@@ -214,45 +214,39 @@ export const PLATFORMS = [
 export const FEATURES = [
   {
     id: "unified-control",
-    title: "Unified Control Interface",
+    title: "A space, not an inventory",
     description:
-      "A single interface layer for devices, services, and local systems. Reduces the cognitive overhead of managing multiple applications and disconnected controls.",
+      "Rooms, scenes, and useful states replace the wall of protocols, integrations, and vendor-specific controls.",
   },
   {
     id: "customizable-layouts",
-    title: "Customizable Layouts and Skins",
+    title: "Views that fit the person",
     description:
-      "Layout, information density, and visual appearance can be adjusted to match individual preferences, environments, and workflows without modifying the underlying system.",
+      "A guest, family member, grandparent, and power user can each get an interface with the right density and permissions.",
   },
   {
     id: "accessibility",
-    title: "Accessibility-Focused Design",
+    title: "Existing systems stay useful",
     description:
-      "Built from the outset with accessibility as a structural requirement. Interaction style, scale, contrast, and input method support are configurable rather than fixed.",
+      "Fabric is designed as a shared surface above the systems that already work, not another forced replacement ecosystem.",
   },
   {
     id: "local-first",
-    title: "Local-First Operation",
+    title: "Local-first by design",
     description:
-      "Core functions operate without a cloud dependency. The application is designed to remain fully functional on a local network without requiring an active internet connection.",
+      "The connected space should remain understandable and useful even when an outside service or internet connection is unavailable.",
   },
   {
     id: "privacy",
-    title: "Privacy-Conscious Architecture",
+    title: "Clear roles and boundaries",
     description:
-      "No telemetry by default. No accounts required. Data stays on the user's devices and network unless the user explicitly chooses otherwise.",
+      "People see only the controls and information appropriate to their role, with sensitive actions kept explicit.",
   },
   {
     id: "multi-system",
-    title: "Multi-System and Protocol Support",
+    title: "Personality without chaos",
     description:
-      "Intended to integrate with a range of home automation standards, local services, and connected device protocols without requiring vendor lock-in.",
-  },
-  {
-    id: "cross-platform",
-    title: "Desktop and Mobile Applications",
-    description:
-      "Planned for Windows, macOS, Android, and iPhone and iPad. A consistent interface model across all supported platforms.",
+      "Skins can change tone, contrast, and information density while the underlying home model stays coherent.",
   },
 ];
 

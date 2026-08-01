@@ -6,7 +6,7 @@ export default function OverviewSection() {
 
   return (
     <section
-      id="what"
+      id="why-fabric"
       ref={ref}
       className="border-b border-[#1E1E22] py-24 lg:py-32"
       aria-labelledby="overview-heading"
@@ -26,18 +26,18 @@ export default function OverviewSection() {
               id="overview-heading"
               className="text-xs font-semibold tracking-[0.2em] uppercase text-[#38BDF8] mb-2"
             >
-              Overview
+              Why Fabric
             </h2>
           </div>
           <div className="lg:col-span-9">
             <p className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#EDEDED] leading-[1.5] font-light max-w-4xl mb-8">
-              Fabric OS is a unified interface layer for connected spaces. It is
-              designed to make devices, services, automation, and controls easier
-              to understand and use — without requiring users to adopt a single
-              vendor ecosystem.
+              The smart home has enough apps, hubs, clouds, and dashboards. What
+              it needs is a human layer.
             </p>
             <p className="text-base text-[#88888C] leading-[1.6] max-w-3xl mb-8">
-              An interactive web prototype is available now.{" "}
+              Fabric sits above the technical inventory and translates it into a
+              place people can understand: rooms, routines, roles, and clear
+              choices. An interactive web prototype is available now.{" "}
               <a
                 href={PRODUCT_LINKS.liveDemo}
                 target="_blank"
@@ -51,16 +51,16 @@ export default function OverviewSection() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1E1E22] border border-[#1E1E22] rounded-sm overflow-hidden">
               {[
                 {
-                  label: "Single Interface",
-                  desc: "One application for controls spread across multiple systems and vendors.",
+                  label: "One coherent place",
+                  desc: "See the home as rooms, scenes, and needs—not a list of vendor integrations.",
                 },
                 {
-                  label: "Local Operation",
-                  desc: "Designed to function fully within your local network, without cloud dependency.",
+                  label: "Your systems remain yours",
+                  desc: "Fabric is designed to work with existing systems instead of replacing what already works.",
                 },
                 {
-                  label: "Your Devices",
-                  desc: "Planned for Windows, macOS, Android, and iPhone and iPad.",
+                  label: "Made for different people",
+                  desc: "Adaptable views can be calmer for guests and family or denser for power users.",
                 },
               ].map((item) => (
                 <div key={item.label} className="bg-[#0A0A0B] p-6">

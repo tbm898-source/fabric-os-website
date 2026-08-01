@@ -41,19 +41,27 @@ export default function NotifySection() {
               id="notify-heading"
               className="text-xs font-semibold tracking-[0.2em] uppercase text-[#38BDF8]"
             >
-              Stay Informed
+              Follow the Build
             </h2>
           </div>
 
           <div className="lg:col-span-9">
             <p className="text-[clamp(1.1rem,2vw,1.5rem)] text-[#EDEDED] leading-[1.5] font-light max-w-2xl mb-3">
-              Get notified when Fabric OS is ready.
+              See what Fabric is becoming.
             </p>
             <p className="text-sm text-[#88888C] leading-[1.6] max-w-xl mb-10">
-              Leave your email address and we will reach out when the first
-              release becomes available. No marketing, no newsletters — one
-              message when we launch.
+              Try the working prototype today, or leave your email for one
+              message when the first public release is ready. No newsletter.
             </p>
+
+            <a
+              href="https://fabric-home-os.base44.app/demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex mb-8 text-sm font-semibold text-[#0A0A0B] bg-[#38BDF8] hover:bg-[#5cc8fa] px-5 py-3 rounded-sm transition-colors"
+            >
+              Open the working prototype ↗
+            </a>
 
             {state === "success" ? (
               <div className="inline-flex items-center gap-3 border border-[#38BDF8]/20 bg-[#38BDF8]/5 px-5 py-4 rounded-sm">
