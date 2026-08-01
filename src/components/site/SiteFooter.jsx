@@ -1,4 +1,4 @@
-import { FOOTER_LINKS, SITE_META } from "@/data/siteData";
+import { FOOTER_LINKS } from "@/data/siteData";
 
 export default function SiteFooter() {
   const currentYear = new Date().getFullYear();

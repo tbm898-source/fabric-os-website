@@ -1,39 +1,43 @@
-**Welcome to your Base44 project** 
+# Fabric OS Website
 
-**About**
+Public website and press resources for Fabric OS. This repository owns product messaging,
+release-status communication, public links, and the website presentation layer. It does not own
+Fabric device behavior, permissions, adapters, bridge services, or product state.
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+## Routes
 
-This project contains everything you need to run your app locally.
+- `/` — product overview, principles, roadmap, platform status, and notification form
+- `/press` — press kit and brand resources
 
-**Edit the code in your local development environment**
+Product status and public URLs are centralized in `src/data/siteData.js`. Press facts and asset
+status are centralized in `src/data/pressKitData.js`. Keep claims accurate to the current product;
+placeholder assets must remain visibly labeled until final assets exist.
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+## Local development
 
-**Prerequisites:** 
-
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
-
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+```bash
+npm ci
+npm run dev
 ```
 
-Run the app: `npm run dev`
+The repository is connected to its own Base44 project and GitHub repository. Local Base44 app
+identity is intentionally not committed; use the Base44 linking workflow when a machine must
+deploy or synchronize the project.
 
-**Publish your changes**
+## Validation
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+```bash
+npm run check
+```
 
-**Docs & Support**
+CI runs install, lint, typecheck, build, and a high-severity dependency audit independently from
+the Fabric product repository.
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+## Boundary
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+- Website repository: `tbm898-source/fabric-os-website`
+- Product repository: `tbm898-source/fabric`
+- Integration service: separate `event-ingress` project
+
+Changes between these projects cross through documented URLs and versioned contracts—not copied
+source files or a shared database.

@@ -1,4 +1,4 @@
-import { PRESS_META, MEDIA_CONTACT } from "@/data/pressKitData";
+import { PRESS_META } from "@/data/pressKitData";
 import { downloadPressKit } from "@/lib/pressKitDownload";
 
 export default function PressHero() {
