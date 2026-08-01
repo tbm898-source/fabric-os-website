@@ -17,9 +17,9 @@ export default function PressPhilosophy() {
               Design Philosophy
             </h2>
             <p className="text-xs text-[#4A4A52] leading-[1.6]">
-              Fabric OS does not bypass operating-system security. It makes
-              security boundaries visible, understandable, navigable, and
-              user-controlled.
+              The experience starts with people, rooms, and intent. Technology
+              stays visible enough to trust without becoming the organizing
+              principle of the space.
             </p>
           </div>
 
