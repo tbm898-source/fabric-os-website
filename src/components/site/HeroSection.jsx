@@ -34,11 +34,11 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative max-w-[120rem] mx-auto px-6 lg:px-10 w-full pb-0">
+      <div className="relative max-w-[120rem] mx-auto px-6 lg:px-10 w-full pb-0 flex flex-col">
         {/* Interface Preview — upper portion */}
         <div
           className={`
-            w-full mt-6 mb-8
+            order-2 w-full mb-10
             transition-all duration-700
             motion-reduce:transition-none
             ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
@@ -51,7 +51,7 @@ export default function HeroSection() {
         {/* Hero text block — bottom-left anchored */}
         <div
           className={`
-            max-w-4xl pb-12
+            order-1 max-w-5xl pt-16 lg:pt-24 pb-12
             transition-all duration-700 delay-150
             motion-reduce:transition-none
             ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
@@ -70,7 +70,7 @@ export default function HeroSection() {
                 Fabric OS
               </span>
               <span className="text-xs text-[#4A4A52] tracking-wide">
-                Development Phase 1
+                Working prototype
               </span>
             </div>
           </div>
@@ -78,15 +78,14 @@ export default function HeroSection() {
           {/* H1 — the single page-level heading */}
           <h1
             id="hero-headline"
-            className="text-[clamp(2.5rem,7vw,7rem)] font-bold leading-[1.0] tracking-[-0.04em] text-[#EDEDED] mb-8"
+            className="text-[clamp(3rem,7vw,7rem)] font-bold leading-[0.95] tracking-[-0.05em] text-[#EDEDED] mb-8"
           >
-            One interface for the systems that make a space work.
+            Make every device feel like one home.
           </h1>
 
           <p className="text-lg text-[#88888C] leading-[1.6] max-w-2xl mb-10">
-            Fabric OS is a cross-platform application under active development,
-            planned for Windows, macOS, Android, and iPhone and iPad. This site
-            is its future official information and download hub.
+            Fabric is a human layer for connected spaces: one calm, adaptable
+            view across the devices, rooms, scenes, and services you already use.
           </p>
 
           {/* CTAs */}
@@ -105,10 +104,10 @@ export default function HeroSection() {
               "
               style={{ transitionTimingFunction: "cubic-bezier(0.2,0.8,0.2,1)" }}
             >
-              Try the Prototype
+              Explore the Prototype
             </a>
             <button
-              onClick={() => handleScroll("#download")}
+              onClick={() => handleScroll("#why-fabric")}
               className="
                 inline-flex items-center gap-2 px-6 py-3
                 bg-[#EDEDED] text-[#0A0A0B]
@@ -119,10 +118,10 @@ export default function HeroSection() {
               "
               style={{ transitionTimingFunction: "cubic-bezier(0.2,0.8,0.2,1)" }}
             >
-              Platform Status
+              Why Fabric
             </button>
             <button
-              onClick={() => handleScroll("#project")}
+              onClick={() => handleScroll("#notify")}
               className="
                 inline-flex items-center gap-2 px-6 py-3
                 border border-[#2A2A2F] text-[#88888C]
@@ -133,7 +132,7 @@ export default function HeroSection() {
               "
               style={{ transitionTimingFunction: "cubic-bezier(0.2,0.8,0.2,1)" }}
             >
-              Learn About the Project
+              Follow the Build
             </button>
           </div>
         </div>

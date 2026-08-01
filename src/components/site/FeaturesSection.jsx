@@ -18,13 +18,13 @@ export default function FeaturesSection() {
               id="features-heading"
               className="text-xs font-semibold tracking-[0.2em] uppercase text-[#38BDF8]"
             >
-              Features
+              How it helps
             </h2>
           </div>
           <div className="lg:col-span-9">
             <p className="text-lg text-[#88888C] leading-[1.6] max-w-2xl mb-16">
-              Fabric OS is being designed around a set of principles that
-              prioritize clarity, control, and durability over feature density.
+              The prototype explores a simpler relationship between people and
+              the technology around them.
             </p>
             <div
               ref={ref}

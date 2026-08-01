@@ -28,8 +28,8 @@ export default function SiteFooter() {
               </span>
             </div>
             <p className="text-xs text-[#4A4A52] leading-[1.6] max-w-xs">
-              A cross-platform application under active development. This site
-              will become its official information and download hub.
+              A human layer for connected spaces. One clear, adaptable view
+              across the systems that make a home work.
             </p>
           </div>
 

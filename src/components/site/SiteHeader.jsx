@@ -1,39 +1,16 @@
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-const NAV_GROUPS = [
-  {
-    label: "Product",
-    items: [
-      { label: "Overview", href: "#overview" },
-      { label: "Features", href: "#features" },
-      { label: "Platforms", href: "#platforms" },
-      { label: "Roadmap", href: "#roadmap" },
-    ],
-  },
-  {
-    label: "Philosophy",
-    items: [
-      { label: "Design Philosophy", href: "#philosophy" },
-      { label: "Privacy", href: "#privacy" },
-      { label: "Accessibility", href: "#accessibility" },
-      { label: "Project", href: "#project" },
-    ],
-  },
-  {
-    label: "More",
-    items: [
-      { label: "Download", href: "#download" },
-      { label: "Stay Informed", href: "#notify" },
-      { label: "Press Kit", href: "/press", external: true },
-    ],
-  },
+const NAV_ITEMS = [
+  { label: "Why Fabric", href: "#why-fabric" },
+  { label: "How it helps", href: "#features" },
+  { label: "Status", href: "#roadmap" },
+  { label: "Follow the build", href: "#notify" },
 ];
 
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [openGroup, setOpenGroup] = useState(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -41,23 +18,8 @@ export default function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close dropdown on outside click
-  useEffect(() => {
-    if (!openGroup) return;
-    const close = (e) => {
-      if (!e.target.closest("[data-nav-group]")) setOpenGroup(null);
-    };
-    document.addEventListener("mousedown", close);
-    return () => document.removeEventListener("mousedown", close);
-  }, [openGroup]);
-
-  const handleNavClick = (href, external) => {
+  const handleNavClick = (href) => {
     setMobileOpen(false);
-    setOpenGroup(null);
-    if (external) {
-      window.location.href = href;
-      return;
-    }
     const target = document.querySelector(href);
     if (target) target.scrollIntoView({ behavior: "smooth" });
   };
@@ -90,42 +52,20 @@ export default function SiteHeader() {
             </span>
           </a>
 
-          {/* Desktop Nav — grouped dropdowns */}
+          {/* Desktop navigation */}
           <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-1">
-            {NAV_GROUPS.map((group) => (
-              <div key={group.label} className="relative" data-nav-group>
-                <button
-                  onClick={() => setOpenGroup(openGroup === group.label ? null : group.label)}
-                  aria-expanded={openGroup === group.label}
-                  className="flex items-center gap-1.5 px-3.5 py-2 text-sm text-[#88888C] hover:text-[#EDEDED] transition-colors duration-200 tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-1 focus-visible:ring-offset-[#0A0A0B] rounded-sm"
-                >
-                  {group.label}
-                  <ChevronDown
-                    size={13}
-                    className={`transition-transform duration-200 ${openGroup === group.label ? "rotate-180" : ""}`}
-                  />
-                </button>
-
-                {openGroup === group.label && (
-                  <div className="absolute top-full left-0 mt-1.5 w-52 bg-[#0D0D0F] border border-[#2A2A2F] rounded-sm shadow-xl shadow-black/60 overflow-hidden">
-                    {group.items.map((item) => (
-                      <button
-                        key={item.href}
-                        onClick={() => handleNavClick(item.href, item.external)}
-                        className="w-full text-left px-4 py-3 text-sm text-[#88888C] hover:text-[#EDEDED] hover:bg-[#141416] transition-colors duration-150 tracking-wide flex items-center justify-between group"
-                      >
-                        {item.label}
-                        {item.external && (
-                          <span className="text-[10px] text-[#38BDF8] tracking-[0.1em] uppercase opacity-70 group-hover:opacity-100">
-                            ↗
-                          </span>
-                        )}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+            {NAV_ITEMS.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => handleNavClick(item.href)}
+                className="px-3.5 py-2 text-sm text-[#88888C] hover:text-[#EDEDED] transition-colors duration-200 tracking-wide rounded-sm"
+              >
+                {item.label}
+              </button>
             ))}
+            <a href="/press" className="ml-2 px-4 py-2 text-sm border border-[#2A2A2F] text-[#EDEDED] hover:border-[#38BDF8] transition-colors rounded-sm">
+              Press
+            </a>
           </nav>
 
           {/* Mobile toggle */}
@@ -145,22 +85,12 @@ export default function SiteHeader() {
       {mobileOpen && (
         <div id="mobile-nav" className="md:hidden bg-[#0A0A0B] border-t border-[#1E1E22]">
           <nav className="max-w-[120rem] mx-auto px-6 py-4 space-y-4">
-            {NAV_GROUPS.map((group) => (
-              <div key={group.label}>
-                <p className="text-[10px] text-[#38BDF8] tracking-[0.2em] uppercase font-semibold mb-2 px-3">
-                  {group.label}
-                </p>
-                {group.items.map((item) => (
-                  <button
-                    key={item.href}
-                    onClick={() => handleNavClick(item.href, item.external)}
-                    className="w-full text-left px-3 py-2.5 text-sm text-[#88888C] hover:text-[#EDEDED] hover:bg-[#141416] transition-colors duration-150 tracking-wide rounded-sm"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
+            {NAV_ITEMS.map((item) => (
+              <button key={item.href} onClick={() => handleNavClick(item.href)} className="w-full text-left px-3 py-2.5 text-sm text-[#88888C] hover:text-[#EDEDED] hover:bg-[#141416] rounded-sm">
+                {item.label}
+              </button>
             ))}
+            <a href="/press" className="block px-3 py-2.5 text-sm text-[#EDEDED]">Press kit ↗</a>
           </nav>
         </div>
       )}
